@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-etl-backtest-kit"
+version = "0.1.0"
+description = "China commodity/index futures & options EOD data ETL and anti-overfitting research backtest toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+etl = ["pandas>=2.0", "pyarrow>=14.0", "tqsdk"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
